@@ -1,0 +1,173 @@
+# 🎬 Movie App
+
+Movie App adalah aplikasi web berbasis Laravel yang digunakan untuk
+menampilkan, mencari, dan melihat detail film menggunakan API eksternal
+(seperti TMDB API) atau database lokal.
+
+------------------------------------------------------------------------
+
+## 📌 Tech Stack & Library
+
+### 🔹 Backend
+
+-   Laravel (PHP Framework)
+-   Eloquent ORM
+-   Laravel HTTP Client / Guzzle
+-   MySQL Database
+-   Composer
+
+### 🔹 Frontend
+
+-   Blade Template Engine
+-   Bootstrap / CSS
+-   JavaScript (Fetch API / Axios)
+-   Laravel Mix
+-   NPM
+
+------------------------------------------------------------------------
+
+## 🏗️ Architecture
+
+Aplikasi menggunakan pola **MVC (Model-View-Controller)**:
+
+User Request\
+→ Routes\
+→ Controller\
+→ Model\
+→ Database / External API\
+→ View (Blade Template)\
+→ Response ke User
+
+Struktur utama:
+
+    app/
+     ├── Http/Controllers
+     ├── Models
+    routes/
+     ├── web.php
+    resources/
+     ├── views/
+    database/
+     ├── migrations/
+
+------------------------------------------------------------------------
+
+## 🚀 Fitur Lengkap
+
+### 🎞️ 1. Daftar Film
+
+-   Menampilkan daftar film populer / terbaru
+-   Pagination
+-   Poster film ditampilkan
+-   Rating film
+
+### 🔍 2. Search Film
+
+-   Pencarian berdasarkan judul
+-   Real-time query ke API / database
+-   Hasil ditampilkan dalam bentuk card
+
+### 📖 3. Detail Film
+
+-   Poster ukuran besar
+-   Judul film
+-   Tanggal rilis
+-   Rating
+-   Sinopsis lengkap
+-   Genre
+
+### ❤️ 4. Favorite (Jika Diimplementasikan)
+
+-   Simpan film ke daftar favorit
+-   Tersimpan di database
+-   Bisa dihapus dari favorit
+
+### 🔐 5. Authentication (Opsional)
+
+-   Login & Register
+-   Session-based authentication
+
+------------------------------------------------------------------------
+
+## 🖼️ Screenshot Preview
+
+Tambahkan screenshot ke folder berikut:
+
+    public/screenshots/
+
+Lalu gunakan format berikut:
+
+### 🏠 Homepage
+
+![Homepage](public/screenshots/homepage.png)
+
+### 🔎 Search Result
+
+![Search](public/screenshots/search.png)
+
+### 🎬 Detail Movie
+
+![Detail](public/screenshots/detail.png)
+
+> Ganti file gambar sesuai screenshot asli project.
+
+------------------------------------------------------------------------
+
+## ⚙️ Cara Instalasi
+
+### 1️⃣ Clone Repository
+
+    git clone https://github.com/ariq123/movie_app.git
+    cd movie_app
+
+### 2️⃣ Install Dependency
+
+    composer install
+    npm install
+
+### 3️⃣ Setup Environment
+
+    cp .env.example .env
+    php artisan key:generate
+
+Edit file `.env` dan sesuaikan database:
+
+    DB_DATABASE=movieapp
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+### 4️⃣ Migrasi Database
+
+    php artisan migrate
+
+### 5️⃣ Build Frontend
+
+    npm run dev
+
+### 6️⃣ Jalankan Server
+
+    php artisan serve
+
+Akses di: http://localhost:8000
+
+------------------------------------------------------------------------
+
+## 🧪 Testing
+
+    php artisan test
+
+------------------------------------------------------------------------
+
+## 📦 Deployment
+
+Untuk production:
+
+    npm run build
+    php artisan config:cache
+    php artisan route:cache
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+MIT License
