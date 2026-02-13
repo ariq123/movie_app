@@ -2,7 +2,7 @@
 
 Movie App adalah aplikasi web berbasis Laravel yang digunakan untuk
 menampilkan, mencari, dan melihat detail film menggunakan API eksternal
-(seperti TMDB API) atau database lokal.
+https://www.omdbapi.com/
 
 ------------------------------------------------------------------------
 
