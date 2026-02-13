@@ -4,7 +4,8 @@ Movie App adalah aplikasi web berbasis Laravel yang digunakan untuk
 menampilkan, mencari, dan melihat detail film menggunakan API eksternal
 https://www.omdbapi.com/
 
-Demo : 
+Username: aldmic
+Password: 123abc123
 
 ------------------------------------------------------------------------
 
