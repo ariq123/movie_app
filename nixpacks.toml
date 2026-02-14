@@ -1,8 +1,9 @@
 [phases.setup]
-nixPkgs = ["php74", "php74Packages.composer"]
+nixPkgs = ["php", "composer"]
 
 [phases.install]
 cmd = "composer install --no-dev --optimize-autoloader --no-scripts"
 
 [phases.build]
 cmd = "php artisan config:cache || true"
+
