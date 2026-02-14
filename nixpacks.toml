@@ -2,7 +2,7 @@
 nixPkgs = ["php81", "php81Packages.composer"]
 
 [phases.install]
-cmd = "composer install --no-dev --optimize-autoloader"
+cmd = "composer install --no-dev --optimize-autoloader --no-scripts"
 
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
