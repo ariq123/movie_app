@@ -1,2 +1,5 @@
-[variables]
-    PHP_VERSION = '8.1'
+[phases.setup]
+nixPkgs = ["php81", "composer"]
+
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
